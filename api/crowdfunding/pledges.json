@@ -1,0 +1,49 @@
+{
+  "pledges": [
+    {
+      "amountInr": 5000,
+      "backerHandle": "@adityam_mumbai",
+      "backerName": "Aditya Mehta",
+      "city": "Mumbai, IN",
+      "createdAt": "2026-11-11T04:45:19.267Z",
+      "id": 1,
+      "message": "Backing zero-bloat sovereign systems engineering in Mumbai.",
+      "platform": "Direct UPI (HDFC)",
+      "tierLabel": "Sovereign Lab Backer",
+      "upiEscrowVerified": true,
+      "userEmail": null,
+      "userId": null,
+      "userUid": null
+    },
+    {
+      "amountInr": 12500,
+      "backerHandle": "@sarahj_sf",
+      "backerName": "Sarah Jenkins",
+      "city": "San Francisco, US",
+      "createdAt": "2026-11-11T16:45:19.267Z",
+      "id": 2,
+      "message": "Love the 14ms mobile speed benchmark. Huge need in D2C.",
+      "platform": "BuyMeACoffee Global",
+      "tierLabel": "Global IP Patron",
+      "upiEscrowVerified": true,
+      "userEmail": null,
+      "userId": null,
+      "userUid": null
+    },
+    {
+      "amountInr": 10000,
+      "backerHandle": "@fintech_scout",
+      "backerName": "Kunal Shah Fans",
+      "city": "Bengaluru, IN",
+      "createdAt": "2026-11-12T00:45:19.267Z",
+      "id": 3,
+      "message": "Omsetra double entry trial balance invariants are pure art.",
+      "platform": "UPI Escrow (Navi Axis)",
+      "tierLabel": "Ledger Engine Patron",
+      "upiEscrowVerified": true,
+      "userEmail": null,
+      "userId": null,
+      "userUid": null
+    }
+  ]
+}

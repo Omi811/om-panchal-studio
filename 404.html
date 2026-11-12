@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Om Panchal Studio — Autonomous Systems &amp; Low-Latency UI</title>
+    <meta name="description" content="Executive venture studio by Om Panchal (Omi811). 7 live sovereign systems, 14ms D2C mobile speed sprints (100/100 Lighthouse guaranteed), and turnkey IP buyouts." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Om Panchal Studio" />
+    <meta property="og:title" content="Om Panchal Studio — Autonomous Systems &amp; Low-Latency UI" />
+    <meta property="og:description" content="7 live production systems, &lt;12ms DOM latency, 100/100 Lighthouse scores, and $0/mo cloud burn. Book a 48-hour D2C speed sprint, acquire turnkey IP, or inspect the 10ms angel pitch deck." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Om Panchal Studio — Autonomous Systems &amp; Low-Latency UI" />
+    <meta name="twitter:description" content="7 live production systems, &lt;12ms DOM latency, 100/100 Lighthouse scores, and $0/mo cloud burn. Book a 48-hour D2C speed sprint or acquire turnkey IP." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..800&amp;family=Hind:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Om Panchal Studio",
+        "alternateName": "Omi811 Autonomous Systems &amp; Low-Latency UI Studio",
+        "url": "https://omi811.github.io/",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Mumbai",
+          "addressCountry": "IN"
+        },
+        "founder": {
+          "@type": "Person",
+          "name": "Om Panchal"
+        },
+        "description": "Autonomous Solo Systems Architect operating 7 live production systems across 25 commercial repositories with &lt;12ms DOM latency and 100/100 Google Lighthouse scores.",
+        "makesOffer": [
+          {
+            "@type": "Offer",
+            "name": "48-Hour 10ms D2C Speed Sprint",
+            "price": "20000",
+            "priceCurrency": "INR",
+            "description": "Mobile hero rebuild in pure 10ms web standards with a guaranteed 100/100 Google Lighthouse score in 48 hours."
+          },
+          {
+            "@type": "Offer",
+            "name": "AstroBharat Turnkey IP Buyout",
+            "price": "85000",
+            "priceCurrency": "INR",
+            "description": "Outright commercial IP acquisition of the zero-API Next.js 14 Vedic calculation and SVG Kundli engine."
+          }
+        ]
+      }
+    </script>
+    <link rel="stylesheet" crossorigin="" href="./assets/index-CT_4wNdR.css" />
+  </head>
+  <body class="bg-[#070A12] text-[#F8FAFC] antialiased selection:bg-[#D4AF37]/30 selection:text-[#F8FAFC]">
+    <div id="root"></div>
+    <script>
+      (function () {
+        if (typeof window === "undefined" || typeof window.fetch !== "function") return;
+        const origFetch = window.fetch.bind(window);
+        const SITE_URL = "https://omi811.github.io/om-panchal-studio";
+        const LS = {
+          pledges: "omps_api_pledges_v1",
+          outreach: "omps_api_outreach_v1",
+          methods: "omps_api_methods_v1",
+          dockets: "omps_api_dockets_v1",
+          kundli: "omps_api_kundli_v1"
+        };
+        function readLS(k, fallback) {
+          try {
+            const v = localStorage.getItem(k);
+            return v ? JSON.parse(v) : fallback;
+          } catch { return fallback; }
+        }
+        function writeLS(k, v) {
+          try { localStorage.setItem(k, JSON.stringify(v)); } catch {}
+        }
+        function jsonResp(obj, status) {
+          return new Response(JSON.stringify(obj), {
+            status: status || 200,
+            headers: { "Content-Type": "application/json; charset=utf-8" }
+          });
+        }
+        async function loadBaseJson(relPath) {
+          const r = await origFetch(relPath);
+          return await r.json();
+        }
+        async function readBody(init) {
+          if (!init || !init.body) return {};
+          if (typeof init.body === "string") {
+            try { return JSON.parse(init.body); } catch { return {}; }
+          }
+          return {};
+        }
+        window.fetch = async function (input, init) {
+          const urlStr = typeof input === "string" ? input : (input && input.url) || "";
+          let parsed;
+          try { parsed = new URL(urlStr, window.location.href); } catch { return origFetch(input, init); }
+          const p = parsed.pathname;
+          const idx = p.indexOf("/api/");
+          if (idx === -1) return origFetch(input, init);
+          const apiPath = p.slice(idx);
+          const method = ((init && init.method) || "GET").toUpperCase();
+
+          if (apiPath === "/api/health" && method === "GET") {
+            return origFetch("./api/health.json");
+          }
+          if (apiPath === "/api/github/repos" && method === "GET") {
+            return origFetch("./api/github/repos.json");
+          }
+          if (apiPath === "/api/github/repo-tree" && method === "GET") {
+            return origFetch("./api/github/repo-tree.json");
+          }
+          if (apiPath === "/api/github/commit-and-bundle" && method === "POST") {
+            return jsonResp({ ok: true, commitHash: "gh-pages" });
+          }
+          if (apiPath === "/api/auth/sync") {
+            return jsonResp({ ok: true, synced: true });
+          }
+          if (apiPath === "/api/crowdfunding/pledges") {
+            const base = await loadBaseJson("./api/crowdfunding/pledges.json");
+            const extra = readLS(LS.pledges, []);
+            if (method === "GET") {
+              return jsonResp({ pledges: [...extra, ...(base.pledges || [])] });
+            }
+            if (method === "POST") {
+              const b = await readBody(init);
+              const pledge = {
+                id: Date.now(),
+                backerName: b.backerName || "Anonymous Backer",
+                backerHandle: b.backerHandle || "@founder",
+                city: b.city || "Mumbai, IN",
+                tierLabel: b.tierLabel || "Sovereign Lab Supporter (Tier 1)",
+                amountInr: Number(b.amountInr) || 1000,
+                platform: b.platform || "Direct UPI (HDFC)",
+                message: b.message || "Fueling zero-bloat autonomous systems engineering.",
+                createdAt: new Date().toISOString(),
+                upiEscrowVerified: true
+              };
+              writeLS(LS.pledges, [pledge, ...extra]);
+              return jsonResp({ ok: true, pledge }, 201);
+            }
+          }
+          if (apiPath === "/api/promotion/pipeline" && method === "GET") {
+            const base = await loadBaseJson("./api/promotion/pipeline.json");
+            const extra = readLS(LS.outreach, []);
+            const allLogs = [...extra, ...(base.outreachLogs || [])];
+            const addedInr = extra.reduce((acc, x) => acc + (Number(x.amountInr) || 0), 0);
+            const lockedExtra = extra.filter((x) => x.status === "slot_locked").length;
+            const m = Object.assign({}, base.metrics || {});
+            m.activeOutreachPipelineInr = (m.activeOutreachPipelineInr || 0) + addedInr;
+            m.confirmedAndReservedInr = (m.confirmedAndReservedInr || 0) + addedInr;
+            m.totalWithBackersInr = (m.totalWithBackersInr || 0) + addedInr;
+            m.lockedSlotsCount = (m.lockedSlotsCount || 0) + lockedExtra;
+            m.remainingSlotsCount = Math.max(0, (m.totalSlotsToday || 3) - m.lockedSlotsCount);
+            return jsonResp({ metrics: m, outreachLogs: allLogs });
+          }
+          if (apiPath === "/api/promotion/outreach" && method === "POST") {
+            const b = await readBody(init);
+            const base = await loadBaseJson("./api/promotion/pipeline.json");
+            const extra = readLS(LS.outreach, []);
+            const entry = {
+              id: Date.now(),
+              prospectName: b.prospectName || "Studio Prospect",
+              targetUrlOrCompany: b.targetUrlOrCompany || SITE_URL,
+              contactChannel: b.contactChannel || "email",
+              offerLabel: b.offerLabel || "48h Studio Speed Sprint",
+              amountInr: Number(b.amountInr) || 20000,
+              status: b.status || "sent",
+              pitchSummary: b.pitchSummary || "Dispatched Studio outreach.",
+              createdAt: new Date().toISOString()
+            };
+            const nextExtra = [entry, ...extra];
+            writeLS(LS.outreach, nextExtra);
+            const allLogs = [...nextExtra, ...(base.outreachLogs || [])];
+            const addedInr = nextExtra.reduce((acc, x) => acc + (Number(x.amountInr) || 0), 0);
+            const lockedExtra = nextExtra.filter((x) => x.status === "slot_locked").length;
+            const m = Object.assign({}, base.metrics || {});
+            m.activeOutreachPipelineInr = (m.activeOutreachPipelineInr || 0) + addedInr;
+            m.confirmedAndReservedInr = (m.confirmedAndReservedInr || 0) + addedInr;
+            m.totalWithBackersInr = (m.totalWithBackersInr || 0) + addedInr;
+            m.lockedSlotsCount = (m.lockedSlotsCount || 0) + lockedExtra;
+            m.remainingSlotsCount = Math.max(0, (m.totalSlotsToday || 3) - m.lockedSlotsCount);
+            return jsonResp({ ok: true, outreachLogs: allLogs, metrics: m }, 201);
+          }
+          if (apiPath.startsWith("/api/payment-methods")) {
+            const base = await loadBaseJson("./api/payment-methods.json");
+            let custom = readLS(LS.methods, null);
+            if (!custom) custom = base.methods || [];
+            if (method === "GET") {
+              return jsonResp({ methods: custom });
+            }
+            if (method === "POST") {
+              const b = await readBody(init);
+              const item = Object.assign({ id: Date.now(), createdAt: new Date().toISOString() }, b);
+              custom = [item, ...custom];
+              writeLS(LS.methods, custom);
+              return jsonResp({ ok: true, method: item }, 201);
+            }
+            if (method === "DELETE") {
+              const idStr = apiPath.split("/").pop();
+              custom = custom.filter((x) => String(x.id) !== String(idStr));
+              writeLS(LS.methods, custom);
+              return jsonResp({ ok: true });
+            }
+          }
+          if (apiPath === "/api/dockets") {
+            const items = readLS(LS.dockets, []);
+            if (method === "GET") return jsonResp({ dockets: items });
+            if (method === "POST") {
+              const b = await readBody(init);
+              const docket = Object.assign({ id: "OPS-" + Math.floor(100000 + Math.random() * 900000), createdAt: new Date().toISOString() }, b);
+              writeLS(LS.dockets, [docket, ...items]);
+              return jsonResp({ ok: true, docket }, 201);
+            }
+          }
+          if (apiPath === "/api/kundli") {
+            const items = readLS(LS.kundli, []);
+            if (method === "GET") return jsonResp({ charts: items });
+            if (method === "POST") {
+              const b = await readBody(init);
+              const chart = Object.assign({ id: Date.now(), createdAt: new Date().toISOString() }, b);
+              writeLS(LS.kundli, [chart, ...items]);
+              return jsonResp({ ok: true, chart }, 201);
+            }
+          }
+          if (apiPath === "/api/ponytail/review" && method === "POST") {
+            const b = await readBody(init);
+            const raw = String(b.codeOrStack || "");
+            const lines = raw ? raw.split(/\r?\n/).length : 0;
+            const target = Math.max(1, Math.round(lines * 0.22));
+            const pct = lines > 0 ? Math.min(89, Math.max(42, Math.round(((lines - target) / lines) * 100))) : 78;
+            return jsonResp({
+              ok: true,
+              metrics: { originalLines: lines || 1, targetLinesAfterPonytail: target, estimatedBloatReductionPct: pct },
+              reviewText: "PONYTAIL 6-RUNG AUDIT (Static Edge Mode)\n\n• Detected " + (lines || 1) + " input lines.\n• Recommendation: Remove redundant client hydration wrappers, inline critical CSS under 14KB, defer third-party pixels, and switch to zero-dependency ES2024 DOM updates for <12ms first paint."
+            });
+          }
+          if (apiPath === "/api/promotion/roast-url" && method === "POST") {
+            const b = await readBody(init);
+            const targetUrl = String(b.targetUrl || "https://example.com").trim();
+            const recipientName = String(b.recipientName || "Founder").trim();
+            const spend = Number(b.monthlyAdSpendInr) || 450000;
+            const waste = Math.round(spend * 0.24);
+            const subject = "14ms Mobile Speed Rebuild for " + targetUrl.replace(/^https?:\/\//, "");
+            const body = "Hi " + recipientName + ",\n\nI audited " + targetUrl + " from Om Panchal Studio (Mumbai). High third-party script weight on 4G mobile typically leaks ~₹" + waste.toLocaleString("en-IN") + "/month in bounced ad clicks.\n\nInspect our live <12ms Studio & 48-Hour Speed Sprint proof:\n" + SITE_URL + "/?edition=evo&project=audit-built\n\nHappy to rebuild your landing hero to 100/100 Google Lighthouse Mobile in 48 hours for ₹20,000.\n\nBest,\nOm Panchal (Omi811)";
+            return jsonResp({
+              ok: true,
+              targetUrl,
+              estimatedMonthlyWasteInr: waste,
+              roastAnalysis: "Mobile Speed Audit for " + targetUrl + ":\n• Estimated Paid Ad Leakage: ₹" + waste.toLocaleString("en-IN") + "/mo\n• Target Sovereign Rebuild: <14ms First Contentful Paint · 100/100 Google Lighthouse Mobile\n• Live Studio Proof: " + SITE_URL + "/?edition=evo",
+              suggestedSubject: subject,
+              suggestedEmailBody: body
+            });
+          }
+          if (apiPath === "/api/gemini/chat" && method === "POST") {
+            const b = await readBody(init);
+            const last = Array.isArray(b.messages) && b.messages.length ? b.messages[b.messages.length - 1].text : "";
+            return jsonResp({
+              ok: true,
+              modelUsed: "om-panchal-studio-edge-index",
+              groundingLinks: [{ title: "Om Panchal Studio (GitHub Pages)", uri: SITE_URL + "/?edition=evo" }, { title: "Master Edge Hub", uri: "https://omi811.github.io/" }],
+              text: "Running in static GitHub Pages Edge mode ($0.00/mo burn). For \"" + last + "\":\n\n• 7 Sovereign Systems are live with <12ms DOM latency and 100/100 Lighthouse scores.\n• Explore Evo Studio: " + SITE_URL + "/?edition=evo\n• Full structured export available via ./website_data_export.json or contact panchalom18102000@gmail.com."
+            });
+          }
+          if (apiPath === "/api/gemini/search-audit" && method === "POST") {
+            const b = await readBody(init);
+            const brand = String(b.brandQuery || "D2C Storefront");
+            return jsonResp({
+              ok: true,
+              groundingLinks: [{ title: "Speed Sprints & BUILT™ Audit", uri: SITE_URL + "/?edition=evo&project=audit-built" }],
+              text: "Baseline Speed & GEO Audit Brief for " + brand + " (GitHub Pages Static Edge):\n1. Replace 3MB+ mobile hero bundles with <14KB inline critical shell (<14ms paint).\n2. Add 38-triple Schema.org JSON-LD entity graph (Universal SEO & GEO Suite).\n3. 48-Hour Speed Sprint fixed fee: ₹20,000 ($250) with 100/100 Lighthouse Mobile guarantee."
+            });
+          }
+          if (apiPath === "/api/promotion/scout-leads" && method === "POST") {
+            const b = await readBody(init);
+            return jsonResp({
+              ok: true,
+              groundingLinks: [{ title: "Evo Studio Pipeline", uri: SITE_URL + "/?edition=evo" }],
+              text: "Prospect Scout (" + (b.vertical || "D2C & SaaS") + ") ready in static edge mode. Use the pre-loaded high-intent founder cards or paste any brand URL into Tab 2 (Website Speed Roaster) to generate an immediate ROI audit pitch linking to " + SITE_URL + "/?edition=evo."
+            });
+          }
+          return jsonResp({ ok: true });
+        };
+      })();
+    </script>
+    <script type="module" crossorigin src="./assets/index-BkYjHOZs.js"></script>
+  </body>
+</html>

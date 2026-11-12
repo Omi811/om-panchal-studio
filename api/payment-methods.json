@@ -1,0 +1,40 @@
+{
+  "methods": [
+    {
+      "bankLabel": "HDFC BANK / NAVI AXIS",
+      "coordinate": "8104235964@naviaxis",
+      "createdAt": "2026-11-12T04:45:19.267Z",
+      "defaultAmountInr": 10000,
+      "id": 1,
+      "label": "Primary Direct Indian UPI (HDFC Escrow)",
+      "payeeName": "OM NARENDRA PANCHAL",
+      "paymentUrl": "upi://pay?pa=8104235964@naviaxis&pn=OM%20NARENDRA%20PANCHAL&cu=INR",
+      "railType": "upi",
+      "userId": null
+    },
+    {
+      "bankLabel": "HDFC BANK",
+      "coordinate": "panchalom18-1@okhdfcbank",
+      "createdAt": "2026-11-12T04:45:19.267Z",
+      "defaultAmountInr": 20000,
+      "id": 2,
+      "label": "Secondary HDFC VPA (50% Milestone Advance)",
+      "payeeName": "OM NARENDRA PANCHAL",
+      "paymentUrl": "upi://pay?pa=panchalom18-1@okhdfcbank&pn=OM%20NARENDRA%20PANCHAL&cu=INR",
+      "railType": "upi",
+      "userId": null
+    },
+    {
+      "bankLabel": "Stripe Global / USD",
+      "coordinate": "buymeacoffee.com/panchalom1w",
+      "createdAt": "2026-11-12T04:45:19.267Z",
+      "defaultAmountInr": 2500,
+      "id": 3,
+      "label": "Global BuyMeACoffee Patronage Portal",
+      "payeeName": "Om Panchal",
+      "paymentUrl": "https://buymeacoffee.com/panchalom1w",
+      "railType": "global",
+      "userId": null
+    }
+  ]
+}

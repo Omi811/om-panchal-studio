@@ -1,0 +1,6 @@
+{
+  "ok": true,
+  "status": "healthy",
+  "runtime": "github-pages",
+  "edge": "fastly-github-pages"
+}

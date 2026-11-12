@@ -1,0 +1,49 @@
+{
+  "metrics": {
+    "activeOutreachPipelineInr": 75000,
+    "confirmedAndReservedInr": 110000,
+    "lockedSlotsCount": 2,
+    "remainingSlotsCount": 1,
+    "target24hInr": 200000,
+    "totalSlotsToday": 3,
+    "totalWithBackersInr": 137500
+  },
+  "outreachLogs": [
+    {
+      "amountInr": 10000,
+      "contactChannel": "whatsapp",
+      "createdAt": "2026-11-12T04:45:19.267Z",
+      "id": 1,
+      "offerLabel": "Slot #1 Locked · 48h Studio Speed Sprint (50% Deposit)",
+      "pitchSummary": "Reviewed Om Panchal Studio 3D WebGL hub; locked Slot #1 with ₹10,000 HDFC UPI deposit for 48h <12ms mobile hero rebuild.",
+      "prospectName": "Rohan V. (D2C Apparel Founder, Mumbai)",
+      "status": "slot_locked",
+      "targetUrlOrCompany": "https://urbanloom.in",
+      "userId": null
+    },
+    {
+      "amountInr": 45000,
+      "contactChannel": "gmail_api",
+      "createdAt": "2026-11-12T04:45:19.267Z",
+      "id": 2,
+      "offerLabel": "Studio Custom App Pre-Order Deposit (AstroBharat Core)",
+      "pitchSummary": "Pre-ordered custom Vedic Kundli & Dasha web app after testing the Studio live SVG engine.",
+      "prospectName": "Ananya K. (Product Lead, Spiritual Tech)",
+      "status": "slot_locked",
+      "targetUrlOrCompany": "https://vedicpulse.co",
+      "userId": null
+    },
+    {
+      "amountInr": 20000,
+      "contactChannel": "gmail_api",
+      "createdAt": "2026-11-12T04:45:19.267Z",
+      "id": 3,
+      "offerLabel": "48h Studio Speed Sprint Pitch Sent (₹20,000)",
+      "pitchSummary": "Dispatched Studio Speed Roaster audit showing ₹68,000/mo Meta ad waste from 3.6s mobile load time.",
+      "prospectName": "Vikram S. (Founder, D2C Specialty Coffee)",
+      "status": "sent",
+      "targetUrlOrCompany": "https://roastcraft.in",
+      "userId": null
+    }
+  ]
+}

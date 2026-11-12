@@ -1,0 +1,101 @@
+{
+  "repos": [
+    {
+      "category": "Turnkey IP (₹45k–₹1.5L)",
+      "commitHash": "5e91462",
+      "description": "Turnkey Next.js 14 & TypeScript Vedic Astrology Engine. Zero external API fees, client-side ephemeris Kundli generator, Lahiri Ayanamsha, and Fraunces + Hind dark luxury UI.",
+      "fontsUsed": "Fraunces · Hind · JetBrains Mono",
+      "fullName": "Omi811/astrobharat",
+      "homepage": "https://omi811.github.io/astrobharat/",
+      "htmlUrl": "https://github.com/Omi811/astrobharat",
+      "language": "TypeScript",
+      "name": "astrobharat",
+      "stars": 48
+    },
+    {
+      "category": "Master Flagship Hub",
+      "commitHash": "main-edge",
+      "description": "Omi's personal developer patronage and Buy Me a Coffee page",
+      "fontsUsed": "Fraunces · Hind · JetBrains Mono",
+      "fullName": "Omi811/Omi811.github.io",
+      "homepage": "https://omi811.github.io/",
+      "htmlUrl": "https://github.com/Omi811/Omi811.github.io",
+      "language": "HTML",
+      "name": "Omi811.github.io",
+      "stars": 64
+    },
+    {
+      "category": "Marketplace & Bounties",
+      "commitHash": "verified",
+      "description": "codeBounty connects developers, UI/UX designers, and data analysts with clients seeking their expertise. From building SQL databases to designing interfaces or creating applications, codeBounty ensures a seamless, user-friendly experience for clients and freelancers.",
+      "fontsUsed": "System & Monospace",
+      "fullName": "Omi811/codeBounty",
+      "homepage": "https://codebounty.onrender.com/",
+      "htmlUrl": "https://github.com/Omi811/codeBounty",
+      "language": "TypeScript",
+      "name": "codeBounty",
+      "stars": 29
+    },
+    {
+      "category": "AI Protocol Radar",
+      "commitHash": "mcp-3185",
+      "description": "Autonomous AI agent telemetry & curated 3,185+ Model Context Protocol (MCP) server radar deployed on zero-latency edge architecture.",
+      "fontsUsed": "Fraunces · Hind · JetBrains Mono",
+      "fullName": "Omi811/agentwire",
+      "homepage": "https://omi811.github.io/agentwire/",
+      "htmlUrl": "https://github.com/Omi811",
+      "language": "TypeScript",
+      "name": "agentwire",
+      "stars": 52
+    },
+    {
+      "category": "FinTech & SME Ledger",
+      "commitHash": "ledger-v2",
+      "description": "Zero-drift cloudless double-entry accounting ledger for Indian housing societies, CAs, and SMEs with cryptographic trial balance invariants.",
+      "fontsUsed": "Fraunces · Hind · JetBrains Mono",
+      "fullName": "Omi811/omsetra",
+      "homepage": "https://omi811.github.io/omsetra/",
+      "htmlUrl": "https://github.com/Omi811",
+      "language": "TypeScript",
+      "name": "omsetra",
+      "stars": 41
+    },
+    {
+      "category": "WebGPU Local AI",
+      "commitHash": "webgpu-v1",
+      "description": "In-browser zero-cloud LLM execution runner powered by WebGPU compute shaders and WebAssembly with complete air-gapped data privacy.",
+      "fontsUsed": "Fraunces · Hind · JetBrains Mono",
+      "fullName": "Omi811/freellm-hub",
+      "homepage": "https://omi811.github.io/freellm-hub/",
+      "htmlUrl": "https://github.com/Omi811",
+      "language": "TypeScript / WGSL",
+      "name": "freellm-hub",
+      "stars": 57
+    },
+    {
+      "category": "Sovereign DNS",
+      "commitHash": "is-a-dev",
+      "description": "Grab your own sweet-looking '.is-a.dev' subdomain.",
+      "fontsUsed": "JetBrains Mono",
+      "fullName": "Omi811/register",
+      "homepage": "https://is-a.dev",
+      "htmlUrl": "https://github.com/Omi811/register",
+      "language": "JSON / DNS",
+      "name": "register",
+      "stars": 19
+    },
+    {
+      "category": "48h Speed Sprint Proof",
+      "commitHash": "14ms-hero",
+      "description": "14ms zero-bloat mobile hero rebuild proof for BUILT™ (Vedant Lamba) scoring 100/100 on Google Lighthouse.",
+      "fontsUsed": "Fraunces · Hind · JetBrains Mono",
+      "fullName": "Omi811/audit-built",
+      "homepage": "https://omi811.github.io/audit-built/",
+      "htmlUrl": "https://github.com/Omi811",
+      "language": "Vanilla ES2024",
+      "name": "audit-built",
+      "stars": 36
+    }
+  ],
+  "source": "cache"
+}
