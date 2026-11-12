@@ -24,9 +24,9 @@
     "email": "panchalom18102000@gmail.com",
     "cloudflareLiveUrl": "https://sign-quantum-market-amounts.trycloudflare.com",
     "cloudflarePagesUrl": "https://sign-quantum-market-amounts.trycloudflare.com",
-    "cloudflareCustomPagesUrl": "https://om-panchal-studio.pages.dev",
-    "cloudflarePagesAltUrl": "https://omi811.pages.dev",
-    "cloudflareRepoUrl": "https://github.com/Omi811/om-panchal-studio-cloudflare",
+    "cloudflareCustomPagesUrl": "https://omi811.github.io/om-panchal-studio/?edition=evo",
+    "cloudflarePagesAltUrl": "https://omi811.github.io/om-panchal-studio/?edition=evo",
+    "cloudflareRepoUrl": "https://github.com/Omi811/om-panchal-studio",
     "cloudflareRepoSlug": "Omi811/om-panchal-studio-cloudflare",
     "cloudflareRepoCreateUrl": "https://github.com/new?name=om-panchal-studio-cloudflare&description=Om+Panchal+Studio+deployed+on+Cloudflare+Pages",
     "cloudflareProjectName": "om-panchal-studio",
@@ -704,13 +704,13 @@
   ],
   "cloudflare": {
     "liveUrl": "https://sign-quantum-market-amounts.trycloudflare.com",
-    "pagesUrl": "https://om-panchal-studio.pages.dev",
-    "altPagesUrl": "https://omi811.pages.dev",
-    "githubRepo": "https://github.com/Omi811/om-panchal-studio-cloudflare"
+    "pagesUrl": "https://omi811.github.io/om-panchal-studio/?edition=evo",
+    "altPagesUrl": "https://omi811.github.io/om-panchal-studio/?edition=evo",
+    "githubRepo": "https://github.com/Omi811/om-panchal-studio"
   },
   "githubRepositories": {
     "evoStudioRepo": "https://github.com/Omi811/om-panchal-studio",
-    "cloudflareRepo": "https://github.com/Omi811/om-panchal-studio-cloudflare",
+    "cloudflareRepo": "https://github.com/Omi811/om-panchal-studio",
     "legacyStudioRepo": "https://github.com/Omi811/Omi811.github.io"
   }
 }
